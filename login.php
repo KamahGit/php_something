@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 ?>
 <!DOCTYPE html>
@@ -54,6 +55,15 @@
 
             <button type="submit" name="login" value="login" class="btn btn-primary py-3 w-100 mb-4">Log In</button>
         </form>
+        <p style="color: red">
+
+            <?php if (isset($_SESSION['login_fail'])){
+                echo 'LOGIN FAILED';
+               unset($_SESSION['login_fail']);
+//               var_dump($_SESSION);
+            }
+
+            ?></p>
     </div>
 
 </div>

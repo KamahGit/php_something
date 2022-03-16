@@ -43,12 +43,12 @@ else {
 
 <body>
     <div class="container-xxl position-relative bg-white d-flex p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
+<!--         Spinner Start -->
+<!--        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">-->
+<!--            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">-->
+<!--                <span class="sr-only">Loading...</span>-->
+<!--            </div>-->
+<!--        </div>-->
         <!-- Spinner End -->
 
 
@@ -68,8 +68,8 @@ else {
                         <span>Admin</span>
                     </div>
                 </div>
-<!--                <div class="navbar-nav w-100">-->
-<!--                    <a href="index.php" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>-->
+                <div class="navbar-nav w-100">
+                    <a href="index.php" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
 <!--                    <div class="nav-item dropdown">-->
 <!--                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a>-->
 <!--                        <div class="dropdown-menu bg-transparent border-0">-->
@@ -79,7 +79,7 @@ else {
 <!--                        </div>-->
 <!--                    </div>-->
 <!--                    <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>-->
-<!--                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>-->
+                    <a href="vie.php" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Vie</a>
 <!--                    <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>-->
 <!--                    <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>-->
 <!--                    <div class="nav-item dropdown">-->
@@ -91,7 +91,7 @@ else {
 <!--                            <a href="blank.html" class="dropdown-item">Blank Page</a>-->
 <!--                        </div>-->
 <!--                    </div>-->
-<!--                </div>-->
+                </div>
             </nav>
         </div>
         <!-- Sidebar End -->

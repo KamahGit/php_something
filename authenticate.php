@@ -12,7 +12,7 @@
 
 <?php
 require_once 'dbHandler.php';
-
+session_start();
 //REGISTER
 if (isset($_POST['register'])) {
     extract($_POST);
@@ -44,23 +44,28 @@ if (isset($_POST['login'])){
         $result = $db->getConn()->query($sql);
         $user = mysqli_fetch_assoc($result);
         //var_dump($user);
-        if(password_verify($password, $user['password'])){
-           session_start();
-           unset($user['password']);
-            echo '<script>
+        $auth = password_verify($password, $user['password']);
+        if(!$auth){
+            $_SESSION['login_fail']='true';
+
+            header('location: login.php');
+            }
+            else {
+
+                unset($user['password']);
+                echo '<script>
                     window.alert("Login Successful!");
                    </script>';
-           foreach($user as $key => $value){
-                $_SESSION[$key] = $value;
+                foreach ($user as $key => $value) {
+                    $_SESSION[$key] = $value;
+                }
+                header('location: index.php');
+            }
 
-           }
-
-
-        }
         mysqli_free_result($result);
         mysqli_close($db->getConn());
-        header('location: index.php');
-        var_dump($_SESSION);
+
+        //var_dump($_SESSION);
     }
     catch (Exception $ex) {
         echo $ex->getMessage();
