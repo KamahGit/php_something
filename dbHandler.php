@@ -2,10 +2,10 @@
 class dbHandler
 {
     private $conn;
-    private const DB_HOST = '127.0.0.1';
-    private const DB_USER = 'root';
-    private const DB_PASS = '';
-    private const DB_NAME = 'voting_system';
+    private const DB_HOST = "sql5.freemysqlhosting.net";
+    private const DB_USER = "sql5481859";
+    private const DB_PASS = "1939CNNkTv";
+    private const DB_NAME = "sql5481859";
 
     /**
      * MySQL database connection
@@ -17,8 +17,8 @@ class dbHandler
         $this->conn = new mysqli (self::DB_HOST, self::DB_USER, self::DB_PASS, self::DB_NAME);
         if ($this->conn->connect_error) {
             echo 'Connection Aborted : [' . $this->conn->connect_errno . '] '. $this->conn->connect_error, 'error';
+
         }
-        else {echo 'connection successful';}
         return $this;
     }
 

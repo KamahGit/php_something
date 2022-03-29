@@ -1,3 +1,7 @@
+<?php
+ob_start();
+session_start();    
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,7 +16,7 @@
 
 <?php
 require_once 'dbHandler.php';
-session_start();
+
 //REGISTER
 if (isset($_POST['register'])) {
     extract($_POST);
@@ -53,10 +57,7 @@ if (isset($_POST['login'])){
             else {
 
                 unset($user['password']);
-                echo '<script>
-                    window.alert("Login Successful!");
-                   </script>';
-                foreach ($user as $key => $value) {
+                        foreach ($user as $key => $value) {
                     $_SESSION[$key] = $value;
                 }
                 header('location: index.php');
